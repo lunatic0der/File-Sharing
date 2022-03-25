@@ -10,10 +10,10 @@ from config import (
     API_HASH,
     APP_ID,
     CHANNEL_ID,
-    FORCE_SUB_CHANNEL,
+    FORCE_SUB_CHANNEL1,
     FORCE_SUB_CHANNEL2,
-    FORCE_SUB_CHANNEL3,
-    FORCE_SUB_CHANNEL4,
+    FORCE_SUB_GROUP1,
+    FORCE_SUB_GROUP2,
     LOGGER,
     OWNER,
     TG_BOT_TOKEN,
@@ -47,7 +47,7 @@ class Bot(Client):
                     "Bot tidak dapat Mengambil link Invite dari Force Sub Channel!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL}"
+                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL1}"
                 )
                 self.LOGGER(__name__).info(
                     "Bot Berhenti. Tanyakan Ke https://t.me/mrismanaziz untuk Bantuan"
@@ -63,15 +63,15 @@ class Bot(Client):
                     "Bot tidak dapat Mengambil link Invite dari Force Sub Channel!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL2 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL}"
+                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL2 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL2}"
                 )
                 self.LOGGER(__name__).info(
                     "Bot Berhenti. Tanyakan Ke https://t.me/mrismanaziz untuk Bantuan"
                 )
                 sys.exit()
-        if FORCE_SUB_CHANNEL3:
+        if FORCE_SUB_GROUP1:
             try:
-                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL3)
+                link = await self.export_chat_invite_link(FORCE_SUB_GROUP1)
                 self.invitelink3 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
@@ -79,15 +79,15 @@ class Bot(Client):
                     "Bot tidak dapat Mengambil link Invite dari Force Sub Channel!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL3 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL}"
+                    f"Silakan periksa kembali var FORCE_SUB_GROUP1 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_GROUP1}"
                 )
                 self.LOGGER(__name__).info(
                     "Bot Berhenti. Tanyakan Ke https://t.me/mrismanaziz untuk Bantuan"
                 )
                 sys.exit()
-        if FORCE_SUB_CHANNEL4:
+        if FORCE_SUB_GROUP2:
             try:
-                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL4)
+                link = await self.export_chat_invite_link(FORCE_SUB_GROUP2)
                 self.invitelink4 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
@@ -95,7 +95,7 @@ class Bot(Client):
                     "Bot tidak dapat Mengambil link Invite dari Force Sub Channel!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL4 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL}"
+                    f"Silakan periksa kembali var FORCE_SUB_GROUP2 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_GROUP2}"
                 )
                 self.LOGGER(__name__).info(
                     "Bot Berhenti. Tanyakan Ke https://t.me/mrismanaziz untuk Bantuan"
