@@ -37,9 +37,9 @@ class Bot(Client):
         await super().start()
         usr_bot_me = await self.get_me()
 
-        if FORCE_SUB_CHANNEL:
+        if FORCE_SUB_CHANNEL1:
             try:
-                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
+                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL1)
                 self.invitelink = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
@@ -47,7 +47,7 @@ class Bot(Client):
                     "Bot tidak dapat Mengambil link Invite dari Force Sub Channel!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL1}"
+                    f"Silakan periksa kembali var FORCE_SUB_CHANNEL1 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Channel Saat Ini: {FORCE_SUB_CHANNEL1}"
                 )
                 self.LOGGER(__name__).info(
                     "Bot Berhenti. Tanyakan Ke https://t.me/mrismanaziz untuk Bantuan"
