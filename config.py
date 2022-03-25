@@ -1,3 +1,7 @@
+# (©)Codexbotz
+# Recode by @mrismanaziz
+# t.me/SharingUserbot & t.me/Lunatic0de
+
 import logging
 import os
 from dotenv import load_dotenv
@@ -26,17 +30,17 @@ OWNER = os.environ.get("OWNER", "mrismanaziz")
 # CHANNEL & GROUP
 CHANNEL1 = os.environ.get("CHANNEL1", "Lunatic0de")
 CHANNEL2 = os.environ.get("CHANNEL2", "Lunatic0de")
-CHANNEL3 = os.environ.get("CHANNEL3", "SharingUserbot")
-CHANNEL4 = os.environ.get("CHANNEL4", "SharingUserbot")
+GROUP1 = os.environ.get("GROUP1", "SharingUserbot")
+GROUP2 = os.environ.get("GROUP2", "SharingUserbot")
 
 # Database
 DB_URI = os.environ.get("DATABASE_URL", "")
 
 # force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "0"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
-FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "0"))
-FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))
+FORCE_SUB_GROUP1 = int(os.environ.get("FORCE_SUB_GROUP1", "0"))
+FORCE_SUB_GROUP2 = int(os.environ.get("FORCE_SUB_GROUP2", "0"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -45,12 +49,7 @@ START_MSG = os.environ.get(
     "START_MESSAGE",
     "<b>Hello {first}\n\nSaya dapat menyimpan file pribadi di Saluran Tertentu dan pengguna lain dapat mengaksesnya dari tautan khusus.</b>",
 )
-try:
-    ADMINS = []
-    for x in os.environ.get("ADMINS", "").split():
-        ADMINS.append(int(x))
-except ValueError:
-    raise Exception("Daftar Admin anda tidak berisi User ID yang valid.")
+
 try:
     ADMINS = []
     for x in os.environ.get("ADMINS", "").split():
