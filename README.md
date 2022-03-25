@@ -26,11 +26,13 @@ I Guess This Will Be Usefull For Many People.....😇.
 
 #### Deploy in your VPS
 ````bash
-git clone https://github.com/mrismanaziz/File-Sharing-Bot
-cd File-Sharing-Bot
+git https://github.com/lunatic0der/File-Sharing
+cd File-Sharing
 pip3 install -r requirements.txt
-# <Create config.py appropriately>
-python3 main.py
+cp sample_config.env config.env
+# edit config.env Anda dan isi VARS menggunakan nano config.env CTRL + S untuk menyimpan VARS Anda, 
+# gunakan CTRL + X untuk keluar dan kembali ke direktori File-Sharing-Man
+bash start
 ````
 
 ### Admin Commands
